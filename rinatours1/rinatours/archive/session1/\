@@ -1,0 +1,111 @@
+<?php
+
+include "func.php";
+
+$dbh = new PDO("mysql:dbname=rinatours1","root","");
+$session = secure($dbh);
+$status = $session[status];
+$ic = rand();
+$our_time = time();
+$sth = $dbh->query("select * from users where code = '$session[usercode]'"); $user = $sth->fetch();
+$sth = $dbh->query("select * from user_category where code = '$user[category_code]'"); $category = $sth->fetch();
+
+print <<<ENDLINE
+
+<html>
+<head>
+<title>RinaTours - Main Page</title>
+<meta charset="windows-1255">
+<link rel="stylesheet" href="styles.css">
+<script src="scripts.js"></script>
+<script>
+function go_to_lead(lead_code)
+{
+	var our_ic, our_addr;
+	our_ic = Math.random();
+	our_addr = "lead_details.php?session_index=$session[session_index]&lead_code=" + lead_code + "&ic=" + our_ic;
+	window.location = our_addr;
+}
+</script>
+</head>
+
+<body class="main_page">
+<div class="serilox_main"></div>
+<div align="center">
+<h1>Main</h1>
+<p><table class="main_table_main">
+	<tr>
+ENDLINE;
+	if ($category[leads_monitor] == "yes") 
+	{ print "<td><input type=\"button\" name=\"bn1\" class=\"main_button_main\" value=\"Leads Monitor\" onclick=\"window.location='leads_monitor.php?session_index=$session[session_index]&ic=$ic';\"></td>"; }
+	if ($category[customer_view] == "yes")
+	{ print "<td><input type=\"button\" name=\"bn2\" class=\"main_button_main\" value=\"Customer Search\" onclick=\"window.location='customer_search.php?session_index=$session[session_index]&ic=$ic';\"></td>"; }
+	if ($category[users_manager] == "yes")
+	{ print "<td><input type=\"button\" name=\"bn3\" class=\"main_button_main\" value=\"Users Manager\" onclick=\"window.location='users_manager.php?session_index=$session[session_index]&ic=$ic';\"></td>"; }
+	if ($category[tables_update] == "yes")
+	{ print "<td><input type=\"button\" name=\"bn5\" class=\"main_button_main\" value=\"Tables\" onclick=\"window.location='tables.php?session_index=$session[session_index]&ic=$ic';\"></td>"; }
+	print <<<ENDLINE
+	</tr>
+</table></p>
+
+<div style="width: 800px;"><div class="main_new_leads">New Leads</div></div><p>&nbsp;</p>
+<div class="main_new_leads_details">
+	<table class="main_new_leads_table">
+	<tr style="text-align: center;"><td>First Name</td><td>Last Name</td><td>Media Source</td><td>Scheduled On</td><td>Scheduled For</td><td>Activity Type</td><td>Interested In</td><td>&nbsp;</td></tr>
+
+ENDLINE;
+
+$sth = $dbh->query("select * from assignments where as_type = \"new_lead\" and bizua_unix <= \"$our_time\" order by bizua_unix desc limit 5"); while ($details = $sth->fetch())
+{
+	$sth1 = $dbh->query("select * from customer where code = '$details[customer_code]'"); $customer = $sth1->fetch();
+	$sth1 = $dbh->query("select value from table_details where code = '$details[media_source]'"); $media = $sth1->fetch();
+	$sth1 = $dbh->query("select value from table_details where code = '$details[interested_in]'"); $interested_in = $sth1->fetch();
+	$sth1 = $dbh->query("select value from table_details where code = '$details[activity_type]'"); $activity_type = $sth1->fetch();
+	print <<<ENDLINE
+	<tr><td>$customer[customer_name]</td>
+	<td>$customer[customer_last_name]</td>
+	<td>$media[value]</td>
+	<td>$details[hitkash_date] $details[hitkash_time]</td>
+	<td>$details[bizua_date] $details[bizua_time]</td>
+	<td>$interested_in[value]</td>
+	<td>$activity_type[value]</td>
+	<td style="text-align: center;"><input type="button" name="bn3" value="GO" class="customer_search_button" onclick="go_to_lead('$details[code]');"></td>
+	</tr>
+ENDLINE;
+}
+
+print <<<ENDLINE
+
+</table></div></p>
+
+<div style="width: 800px;"><div class="main_new_leads">To Do List</div></div><p>&nbsp;</p>
+<div class="main_new_leads_details">
+	<table class="main_new_leads_table">
+	<tr style="text-align: center;"><td>First Name</td><td>Last Name</td><td>Media Source</td><td>Scheduled On</td><td>Scheduled For</td><td>Actvitiy Type</td><td>Interested In</td><!--<td>Result</td>--><td>&nbsp;</td></tr>
+
+ENDLINE;
+
+$sth = $dbh->query("select * from assignments where as_type = \"assignment\" and bizua_unix <= \"$our_time\" order by bizua_unix desc limit 5"); while ($details = $sth->fetch())
+{
+	$sth1 = $dbh->query("select * from customer where code = '$details[customer_code]'"); $customer = $sth1->fetch();
+	$sth1 = $dbh->query("select value from table_details where code = '$details[media_source]'"); $media = $sth1->fetch();
+	$sth1 = $dbh->query("select value from table_details where code = '$details[interested_in]'"); $interested_in = $sth1->fetch();
+	$sth1 = $dbh->query("select value from table_details where code = '$details[activity_type]'"); $activity_type = $sth1->fetch();
+	print <<<ENDLINE
+	<tr><td>$customer[customer_name]</td>
+	<td>$customer[customer_last_name]</td>
+	<td>$media[value]</td>
+	<td>$details[hitkash_date] $details[hitkash_time]</td>
+	<td>$details[bizua_date] $details[bizua_time]</td>
+	<td>$interested_in[value]</td>
+	<td>$activity_type[value]</td>
+	<!--<td>$details[as_result]</td>-->
+	<td><input type="button" name="bn3" value="GO" class="customer_search_button" onclick="go_to_lead('$details[code]');"></td>
+	</tr>
+ENDLINE;
+}
+
+print <<<ENDLINE
+</table></div></p></body></html>
+ENDLINE;
+$dbh = NULL;

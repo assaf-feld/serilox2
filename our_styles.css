@@ -1,0 +1,719 @@
+body 
+{
+
+background: -webkit-linear-gradient(left, #6A7174, #ABABAB); /* For Safari */
+background: -o-linear-gradient(left, #6A7174, #ABABAB); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(left, #6A7174, #ABABAB); /* For Firefox 3.6 to 15 */
+background: linear-gradient(to left, #6A7174, #ABABAB); /* Standard syntax */
+
+}
+
+h1.main_title, h3.main_title 
+{ 
+	padding-top: 22px;
+	margin: auto; 
+	-webkit-text-shadow: 0 0 10px #fff;
+	-o-text-shadow: 0 0 10px #fff;
+	-moz-text-shadow: 0 0 10px #fff;
+	text-shadow: 0 0 15px #ffffff;
+}
+
+div.main_title
+{
+	width: 500px;
+	background: -webkit-linear-gradient(left, #A9B7C1, #C0CED9); /* For Safari */
+	background: -o-linear-gradient(left, #A9B7C1, #C0CED9); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(left, #A9B7C1, #C0CED9); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to left, #A9B7C1, #C0CED9); /* Standard syntax */
+	margin: auto;
+	margin-top: 50px;
+	height: 150px;
+	padding-left: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	text-align: center;
+	box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+div.main
+{
+	padding-top: 50px;
+	width: 750px;
+	margin: auto;
+}
+
+div.main_secondary
+{
+	padding-top: 10px;
+	width: 750px;
+	margin: auto;
+}
+
+div.real_main
+{
+	text-align: center;
+}
+
+input.menu_item
+{
+	background: -webkit-linear-gradient(bottom, #192F38, #244350); /* For Safari */
+	background: -o-linear-gradient(bottom, #192F38, #244350); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom, #192F38, #244350); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom, #192F38, #244350); /* Standard syntax */
+	color: #fff;
+	width: 220px;
+	height: 80px;
+	font-family: tahoma;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 8px;
+	border: 1px solid rgba(225, 225, 225, 0.5);
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+	margin: 10px;
+	transition: color 0.3s, border 0.3s;
+	cursor: pointer; 
+}
+
+input.menu_item:hover
+{
+	color: #000;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+div.customer_query
+{
+	width: 600px;
+	margin: auto;
+	background-color: #0F1D38;
+	padding: 22px;
+	border-radius: 10px;
+	height: 220px;
+	box-shadow: 4px 4px 10px #000;
+}
+
+div.customer_query_line
+{
+	width: 100%;
+	float: left;
+	// border: 1px solid #fff;
+}
+
+div.customer_query_title
+{
+	margin: 10px;
+	height: 22px;
+	background-color: #8E9195;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	color: #000;
+	font-family: tahoma;
+	font-size: 12px;
+	line-height: 22px;
+	width: 200px;
+	float: left;
+	text-align: left;
+	padding-left: 10px;
+}
+
+div.customer_query_item
+{
+	float: right;
+	height: 22px;
+}
+
+input.customer_query_item
+{
+	border-radius: 5px;
+	width: 300px;
+	height: 22px;
+	color: #fff;
+	background-color: #03102A;
+	border: 1px solid rgba(225, 225, 225, 0.5);
+	transition: background-color 0.3s, color 0.3s;
+	margin-top: 8px;
+	font-weight: bold;
+	padding-left: 8px;
+}
+
+input.customer_query_item:focus
+{
+	color: #fff;
+	background-color: #324546;
+}
+
+h1.customer_query
+{
+	padding: 20px;
+}
+
+div.horizontal_buttons
+{
+	margin: auto;
+	width: 500px;
+}
+
+input.horizontal_button
+{
+	float: left; 
+	margin-right: 12px; 
+	border-radius: 5px; 
+	border: 1px solid rgba(225, 225, 225, 0.6);
+	transition: color 0.3s, border 0.3s;
+	background: -webkit-linear-gradient(bottom, #192F38, #244350); /* For Safari */
+	background: -o-linear-gradient(bottom, #192F38, #244350); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom, #192F38, #244350); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom, #192F38, #244350); /* Standard syntax */
+	width: 150px;
+	height: 25px;
+	font-family: tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+}	
+
+input.horizontal_button:hover
+{
+	color: #000;
+	border: 1px solid #000;
+}
+
+input.vertical_button
+{
+	float: right; 
+	margin-right: 12px;
+	margin-top: 3px;
+	border-radius: 5px; 
+	border: 1px solid rgba(225, 225, 225, 0.6);
+	transition: color 0.3s, border 0.3s;
+	background: -webkit-linear-gradient(bottom, #192F38, #244350); /* For Safari */
+	background: -o-linear-gradient(bottom, #192F38, #244350); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom, #192F38, #244350); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom, #192F38, #244350); /* Standard syntax */
+	width: 150px;
+	height: 25px;
+	font-family: tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+}	
+
+input.vertical_button:hover
+{
+	color: #000;
+	border: 1px solid #000;
+}
+
+footer.main_footer
+{
+	position: absolute; 
+	bottom: 20px;
+	left: 12px;
+	font-size: 10px;
+	font-family: serif;
+	color: #000;
+	margin: auto;
+	width: 300px;
+	text-align: center;
+	# border: 1px solid #fff;
+	width: 99%;
+}
+
+div.main_header
+{
+	width: 150px;
+	height: 32px;
+	background: url('Pictures/serilox_temporary_logo_1.png');
+	# background-color: #ff0;
+}
+
+div.customer_details_main
+{
+	width: 800px;
+	float: right;
+	background-color: #0F1D38;
+	padding: 22px;
+	border-radius: 10px;
+	height: 300px;
+	box-shadow: 4px 4px 10px #000;
+}
+
+div.customer_details_line
+{
+	width: 100%;
+	float: left;
+}
+
+div.customer_details_item
+{
+	margin: 10px;
+	height: 22px;
+	background-color: #8E9195;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	color: #000;
+	font-family: tahoma;
+	font-size: 12px;
+	line-height: 22px;
+	width: 120px;
+	float: left;
+	text-align: left;
+	padding-left: 10px;
+}
+
+input.customer_details_item
+{
+	border-radius: 5px;
+	width: 220px;
+	height: 22px;
+	color: #fff;
+	background-color: #03102A;
+	border: 1px solid rgba(225, 225, 225, 0.5);
+	transition: background-color 0.3s, color 0.3s;
+	margin-top: 8px;
+	font-weight: bold;
+	padding-left: 8px;
+	margin-left: 10px;
+	float: left;
+}
+
+input.customer_details_item:focus
+{
+	color: #fff;
+	background-color: #324546;
+}
+
+div.contacts_div
+{
+	top: 30px;
+	left: 200px;
+	right: 200px;
+	height: 500px;
+	overflow: auto;
+	display: none;
+	opacity: 0;
+	position: absolute;
+	border-radius: 15px;
+	padding: 30px;
+}
+
+iframe.contacts_iframe
+{
+	width: 99%; 
+	height: 99%;
+	border: 0;
+	margin: auto;
+	border-radius: 10px;
+}
+
+div.contacts_main
+{
+	float: left;
+	width: 800px;
+	text-align: center;
+	margin: auto;
+}
+
+div.contact_col
+{
+	float: left;
+	padding: 5px;
+	margin: 1px;
+	width: 120px;'
+}
+
+div.contact_label
+{
+	background-color: #BBBEC5;
+	border-radius: 3px;
+	width: 130px; 
+	font-family: tahoma;
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+}
+
+input.contact_details
+{
+	color: #fff;
+	font-family: tahoma;
+	font-size: 12px;
+	padding: 5px;
+	width: 120px;
+	height: 20px;
+	line-height: 20px;
+	background-color: #27365A;
+	border: 1px solid rgba(255, 255, 255, 0.7);
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+input.contact_details:focus
+{
+	background-color: #37383A;
+}
+
+input.contact_button
+{
+        float: left;
+        margin-right: 12px;
+        border-radius: 5px;
+        border: 1px solid rgba(225, 225, 225, 0.6);
+        transition: color 0.3s, border 0.3s;
+        background: -webkit-linear-gradient(bottom, #192F38, #244350); /* For Safari */
+        background: -o-linear-gradient(bottom, #192F38, #244350); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(bottom, #192F38, #244350); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to bottom, #192F38, #244350); /* Standard syntax */
+        width: 120px;
+        height: 25px;
+        font-family: tahoma;
+        font-size: 12px;
+        font-weight: bold;
+        color: #fff;
+}	
+
+footer.contacts_footer
+{
+	position: absolute;
+	width: 80%;
+	bottom: 20px;
+	text-align: center;
+}
+
+input.contact_button_done
+{
+        margin-right: 12px;
+        border-radius: 5px;
+        border: 1px solid rgba(225, 225, 225, 0.6);
+        transition: color 0.3s, border 0.3s;
+        background: -webkit-linear-gradient(bottom, #192F38, #244350); /* For Safari */
+        background: -o-linear-gradient(bottom, #192F38, #244350); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(bottom, #192F38, #244350); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to bottom, #192F38, #244350); /* Standard syntax */
+        width: 120px;
+        height: 25px;
+        font-family: tahoma;
+        font-size: 12px;
+        font-weight: bold;
+        color: #fff;
+}	
+
+div.contacts_main_main
+{
+	width: 800px;
+	margin: auto;
+}
+
+table.customer_query_table
+{
+	width: 95%;
+	margin: auto;
+	margin-top: 45px; 
+}
+
+td.customer_query_title
+{
+	background-color: #A3BBAE;
+	font-family: tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+}
+
+td.customer_query_details
+{
+	background-color: #C0C0C1;
+	font-family: tahoma;	
+	font-size: 12px;
+	text-align: center;
+}
+
+div.customer_details_main_page
+{
+	width: 1060px;
+	margin: auto;
+}
+
+div.customer_details_buttons
+{
+	padding-top: 10px;
+	float: left;
+	height: 300px;
+	width: 200px;
+}
+
+table.table_users_add
+{
+	width: 1400px;
+	margin: auto;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 12px;
+	padding: 15px;
+}
+
+table.table_users_update
+{
+	width: 1400px;
+	margin: auto;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 12px;
+	padding: 15px;
+	margin-top: 60px;
+}
+
+div.add_users_buttons
+{
+	width: 340px;
+	margin: auto;
+}
+
+tr.tr_users_add_title
+{
+	background-color: #273E32;
+	color: #fff;
+	font-weight: bold;
+	font-family: tahoma; 
+	font-size: 12px;
+	border-radius: 5px;
+}
+
+tr.tr_users_add_details
+{
+	color: #fff;
+	font-weight: bold;
+	font-family: tahoma; 
+	font-size: 12px;
+	border-radius: 5px;
+}
+
+tr.tr_users_add_details td
+{
+	padding-left: 6px;
+	border-radius: 3px;
+	text-align: center;
+}
+
+tr.tr_users_add_title td
+{
+	padding-left: 6px;
+	border-radius: 3px;
+	text-align: center;
+}
+
+input.td_users
+{
+	background-color: #A7AEAF;
+	font-family: tahoma;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 3px;
+	border-radius: 3px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 3px;
+	width: 90%;
+}
+
+input.update_button
+{
+	width: 50px;
+	font-family: tahoma; 
+	font-size: 10px;
+	font-weight: bold;
+	border-radius: 3px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	background-color: #0F272A;
+	color: #fff;
+	transition: color 0.3s;
+	height: 18px;
+}
+
+input.update_button:hover
+{
+	color: #000;
+}
+
+div.tables_main
+{
+	width: 1200px;
+	margin: auto;
+}
+
+div.tables_names
+{
+	width: 200px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 10px;
+	padding: 15px;
+	float: left;
+	margin-top: 30px;
+}
+
+div.tables_details
+{
+	width: 900px;
+	padding: 10px;
+	float: right;
+}
+
+iframe.tables_details_iframe
+{
+	width: 800px;
+	height: 500px;
+	border-radius: 10px;
+	border: 1px solid #aaa;
+}
+
+div.tables_details_add
+{
+	width: 700px;
+	margin: auto;
+	background: -webkit-linear-gradient(bottom, #3C5356, #5E7274); /* For Safari */
+	background: -o-linear-gradient(bottom, #3C5356, #5E7274); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom, #3C5356, #5E7274); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom, #3C5356, #5E7274); /* Standard syntax */
+	color: #fff;
+	border-radius: 5px;
+	height: 40px; 
+	padding: 6px;
+}
+
+div.tables_details_update
+{
+	width: 700px;
+	margin: auto;
+	background: -webkit-linear-gradient(bottom, #3C5356, #5E7274); /* For Safari */
+	background: -o-linear-gradient(bottom, #3C5356, #5E7274); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom, #3C5356, #5E7274); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom, #3C5356, #5E7274); /* Standard syntax */
+	color: #fff;
+	border-radius: 5px;
+	height: 40px; 
+	padding: 6px;
+}
+
+input.tables_details_input
+{
+	margin-top: 5px;
+	border-radius: 5px;
+	background-color: #C2C9C9;
+	color: #000;
+	font-weight: bold;
+	margin-left: 10px;
+	height: 30px;
+	width: 350px;
+	float: left;
+	padding-left: 6px;
+	font-size: 12px;
+	font-family: tahoma; 
+	border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+input.tables_details_submit
+{
+	float: left;
+	border-radius: 5px;
+	background: -webkit-linear-gradient(bottom, #192F38, #244350); /* For Safari */
+	background: -o-linear-gradient(bottom, #192F38, #244350); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom, #192F38, #244350); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom, #192F38, #244350); /* Standard syntax */
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	width: 120px;
+	height: 35px;
+	color: #fff;
+	font-weight: bold;
+	margin-left: 15px;
+	margin-top: 5px;
+}
+
+div.assignments_main
+{
+	width: 800px;
+	margin: auto;
+}
+
+div.assignments_inner
+{
+	background: -webkit-linear-gradient(bottom, #3C5356, #5E7274); /* For Safari */
+        background: -o-linear-gradient(bottom, #3C5356, #5E7274); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(bottom, #3C5356, #5E7274); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to bottom, #3C5356, #5E7274); /* Standard syntax */
+	margin: 10px;
+	border-radius: 5px;
+	width: 300px;
+	float: left;
+	padding: 10px;
+	font-family: tahoma;
+	font-size: 12px;
+	color: #fff;
+	height: 80px;
+	text-align: center;
+}
+
+div.assignments_line
+{
+	width: 800px;
+	float: left;
+}	
+
+textarea.assignments_textarea
+{
+	width: 270px;
+	height: 70px;
+	border-radius: 5px;
+	font-family: tahoma;
+	font-size: 12px;
+	padding: 4px;
+	background-color: #D9D9D9;
+	
+}
+
+div.assignements_buttons
+{
+	width: 400px;
+	margin: auto;
+}
+
+select
+{
+	border-radius: 5px;
+	background-color: #D9D9D9;
+}
+
+date.assignment_date
+{
+	background-color: #D9D9D9;
+}
+
+table.last_assignments_table
+{
+	width: 900px;
+	margin: auto;
+	padding: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 10px;
+	background: -webkit-linear-gradient(left, #0F1C1C, #334646); /* For Safari */
+        background: -o-linear-gradient(left, #0F1C1C, #334646); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(left, #0F1C1C, #334646); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to left, #0F1C1C, #334646); /* Standard syntax */
+}
+
+table.last_assignments_table tr:nth-child(odd)
+{
+	background-color: #282A3A;
+}
+
+table.last_assignments_table tr:nth-child(even)
+{
+	background-color: #3D3F52;
+}
+
+table.last_assignments_table tr
+{
+	font-family: tahoma; 
+	font-size: 12px;
+	color: #fff;
+}
+	
+table.last_assignments_table tr td
+{
+	padding: 5px;
+}
